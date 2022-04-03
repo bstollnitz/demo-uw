@@ -1,0 +1,8 @@
+name: demo-uw
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.10.0
+  - numpy==1.22.3
+  - pandas==1.4.2
