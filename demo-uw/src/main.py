@@ -3,6 +3,15 @@
 import numpy as np
 import pandas as pd
 
+XOR_table = pd.read_csv('demo-uw/data/XOR_table.csv')
+
+XOR_table = XOR_table.values
+X = XOR_table[:, :2]
+targets = XOR_table[:, -1].reshape(-1, 1)
+
+print(X)  # Input data
+print(targets)  # Output targets
+
 input_dim, hidden_dim, output_dim = 2, 16, 1
 learning_rate = 0.1
 
@@ -24,16 +33,6 @@ Loss = []
 
 # Training
 for i in range(10000):
-
-    XOR_table = pd.read_csv('demo-uw/data/XOR_table.csv')
-
-    XOR_table = XOR_table.values
-    X = XOR_table[:, :2]
-    targets = XOR_table[:, -1].reshape(-1, 1)
-
-    print(X)  # Input data
-    print(targets)  # Output targets
-
     # Forward pass: compute predicted y (Activation function of choice)
     z = sigmoid(np.dot(X, W1) + b1)
     y = sigmoid(np.dot(z, W2) + b2)
