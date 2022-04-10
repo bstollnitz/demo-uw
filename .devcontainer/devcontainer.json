@@ -14,12 +14,7 @@
 	"extensions": [
 		"ms-python.python",
 		"ms-python.vscode-pylance",
-		"ms-toolsai.vscode-ai",
 	],
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
-	"features": {
-		"azure-cli": "latest"
-	},
-	"onCreateCommand": "az extension add -n ml -y"
 }
