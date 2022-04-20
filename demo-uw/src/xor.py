@@ -24,7 +24,6 @@ b1 = np.random.randn(1, hidden_dim)
 b2 = np.random.randn(1, output_dim)
 
 
-# Define activation function
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
